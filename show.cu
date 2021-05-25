@@ -12,7 +12,7 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/opencv.hpp>
 
-#define ThreadsPerBlock 16
+#define ThreadsPerBlock 32
 using namespace std;
 __global__ void lessSignificativeBit(unsigned char *image, char *text, int n){
     int col = blockIdx.x * blockDim.x + threadIdx.x;

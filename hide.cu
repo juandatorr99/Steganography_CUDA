@@ -12,7 +12,7 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/opencv.hpp>
 
-#define ThreadsPerBlock 16
+#define ThreadsPerBlock 32
 
 
 __global__ void lessSignificativeBit(unsigned char *image, char *text, int textSize){
@@ -85,7 +85,11 @@ int main(int argc, char **argv){
     
     lessSignificativeBit<<<Blocks, Threads>>>(d_image, d_textBuffer, textSize);
     
+    
     cudaMemcpy(output.ptr(), d_image, imageSize, cudaMemcpyDeviceToHost);
+    for(int i = textSize * 8; i<((textSize * 8)+8);i++){
+         output.ptr()[i] &= ~1;
+    }
     cv::imwrite(argv[3], output);
     
     //Close and Free
