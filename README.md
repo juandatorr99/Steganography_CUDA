@@ -158,7 +158,7 @@ the settings as it is shown in the figure 7.
 
 _Figure 7 Hardware accelerator_
 
-4. Connect Drive to Google Colab local environment
+### 4. Connect Drive to Google Colab local environment
 
 Disclaimer. You will have to do this every time you reconnect to your Google Colab notebook.
 
@@ -198,7 +198,7 @@ key.
 
 _Figure 10 Authorization Code Paste_
 
-5. CUDA File
+### 5. CUDA File
 
 Then you will have to create new files in the folder you have the Google Colab notebook. You
 can create them using the Google Drive “Text Editor” that can be installed as the Google Colab
@@ -248,7 +248,7 @@ return 0 ;
 }
 ```
 
-6. 1 Running terminal Google Colab Pro
+### 6. 1 Running terminal Google Colab Pro
 
 To run the code if you have Google Colaboratory Pro you can use the terminal button in the
 below left corner as it shown in the figure 13.
@@ -261,7 +261,7 @@ Then you will have to go to the directory where the files are located inserting 
 in the terminal.
 cd drive/MyDrive/MyFolder
 
-6.2 Running terminal Google Colab free edition
+### 6.2 Running terminal Google Colab free edition
 
 If you don’t have Google Colab Pro you can add to snippets of code to your notebook that will
 create a terminal on the interface. It is important that these codes are separated as they work into
@@ -319,7 +319,7 @@ terminal’s current folder is the folder you wrote in the step 4.
 
 _Figure 14 Terminal_
 
-7. Compile and Run
+### 7. Compile and Run
 
 To compile the Cuda file because everything is already preinstalled in Google Colab you will
 only have to run the following code on which ever terminal you are using. Change file.cu to the
