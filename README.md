@@ -122,12 +122,12 @@ Figure 4 Install Colaboratory
 ```
 2. Creating Notebook
 
-```
+
 Once Google Colab is installed, is necessary to create a Google Colab notebook through Google
 Drive, it can be created from any folder, but to have a better organization it will be done on the
 same folder where the CUDA files are going to be. Open the folder you’re going to be using and
 click the New button and select Google Colaboratory. This will create your Colab Notebook
-```
+
 ```
 Figure 5 Create new Notebook
 ```
@@ -307,9 +307,9 @@ Figure 14 Terminal
 To compile the Cuda file because everything is already preinstalled in Google Colab you will
 only have to run the following code on which ever terminal you are using. Change file.cu to the
 name of your file to compile the program.
-
+```sh
 nvcc file.cu `pkg-config --cflags opencv` -o file.out `p-config --libs opencv`
-
+```
 Once it is compiled to run the program you will have to run the following code on the terminal.
 The name of the file changes depending on the file.out line on the code above.
 
