@@ -98,7 +98,7 @@ CUDA in a computer without an NVIDIA GPU.
 I will be using some pieces of code from the implementation steganography with CUDA project
 as way to show how OpenCV can be used.
 
-1. Installing Google Colab
+### 1. Installing Google Colab
 Firstly, it is necessary to connect Google Colab to your Google account (if you already have it
 connected skip to the next step). To do this you will have to click on the New button, the same
 one used to create new folders or documents, then click on More and afterwards click on
@@ -128,7 +128,7 @@ Click install and you will have to accept the permissions in order to install it
 
 _Figure 4 Install Colaboratory_
 
-2. Creating Notebook
+### 2. Creating Notebook
 
 
 Once Google Colab is installed, is necessary to create a Google Colab notebook through Google
@@ -141,7 +141,7 @@ click the New button and select Google Colaboratory. This will create your Colab
 
 _Figure 5 Create new Notebook_
 
-3. Connect the GPU to Google Colab
+### 3. Connect the GPU to Google Colab
 
 To change the runtime, you have to click on edit, then notebook settings as it is shown in the
 figure 6
