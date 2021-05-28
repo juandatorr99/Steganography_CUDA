@@ -20,14 +20,14 @@ __global__ void lessSignificativeBit(unsigned char *image, char *text, int textS
     int row = blockIdx.y * blockDim.y + threadIdx.y;
     int offset = col + row * blockDim.x * gridDim.x;
     
-    int charno = offset / 8;
-    if (charno >= textSize) {
+    int index = offset / 8;
+    if (index >= textSize) {
         return;
     }
-    int bit_count = 7 - (offset % 8);
-    char ch = text[charno] >> bit_count;
+    int bitCountShift = 7 - (offset % 8);
+    char charBit = text[index] >> bitCountShift;
     // if this bit is 1, then put 1 to the image RGB value, if bit == 0, put 0
-    if (ch & 1) {
+    if (charBit & 1) {
     image[offset] |= 1;
     } else {
     image[offset] &= ~1;
