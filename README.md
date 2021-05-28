@@ -187,14 +187,14 @@ Run the snippet of code and once you run it a prompt like the following will app
 on the link that is shown, follow the instruction and copy the authorization code to your clipboard using
 the clipboard button.
 
-<img src="./DocumentationImages/9.png" alt="Figure 1" height="100">
+<img src="./DocumentationImages/9.png" alt="Figure 1" height="200">
 
 _Figure 9 Authorization code copy_
 
 Then you will have to paste the code to the text field shown in the figure 10 and press the enter
 key.
 
-<img src="./DocumentationImages/10.png" alt="Figure 1" height="100">
+<img src="./DocumentationImages/10.png" alt="Figure 1" height="200">
 
 _Figure 10 Authorization Code Paste_
 
