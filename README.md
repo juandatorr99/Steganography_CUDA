@@ -1,94 +1,6 @@
-# Steganography with CUDA using Google Colab
+# Manual to use OpenCV + CUDA in Google Colab
 
 ## Juan David Torres Velasco 
-
-Abstract - The following document show the implementation of Steganography in images
-using CUDA C and OpenCV with Google Colab as the running environment.
-
-## I. Introduction
-
-
-Hiding information has been always necessary for humankind and the beginning of the digital era
-brought a lot of ways to hide information. Steganography is one of the many ways to encode,
-encrypt or hide information, this is done by hiding the information in the data.
-
-The project’s objective was to implement steganography in images using CUDA C and OpenCV,
-given that I don’t have a computer with an NVIDIA GPU to run CUDA I had to use Google Colab
-to implement my solution. But because there are no solutions on the internet on how to use
-OpenCV with Google Colab I had to find a solution and the following includes a manual that
-explains step by step how to use OpenCV with Colab.
-
-## II. Steganography
-
-Steganography is a way to hide data into data meaning that you can hide files inside of other files.
-There are many ways to implement steganography, data can be hidden on images, audio and any
-other representation of data imagined. It is important that the file where the data is being hidden
-doesn’t change, therefore in images a good technique to use to hide data is the LSB or least
-significant bit which changes on each pixel the least significative bit on every color.
-
-The LSB technique hides each bit of the data that wants to be hidden in one color of each pixel
-and this was the technique I used for my implementation. Given that CUDA can do many
-operations at once with the use of threads and the GPU, then the idea is to use each thread to hide
-only one bit from the message taken from a text file. Because each bit is independent from each
-other steganography is a great way to apply the CUDA programming language and separate even
-the colors of each pixel to change their least significant bit.
-
-### II.I Hiding
-To do the process of hiding I received the name of the files that were going to be used as arguments
-in the terminal the name of the image file where the message wants to be hidden, the text file with
-the message that wants to be hidden and finally the name of the output image that is going to
-contain the message hidden. Once I have the files, I read first the text file and obtain the message,
-obtain the image file with OpenCV and check whether the message fits into the image or not you
-have to check if (widthImage * heightImage * 3) > ( (textSize + 1) * 8).
-
-After doing so the next step was to do a cudaMalloc to allocate memory on the device and copy
-the image to it with cudaMemcpy to access the image from the gobal function and change the
-pixels from the image. Then to do the global function it is important to create the 3d Blocks and
-Threads with dim3, for the case of Blocks use ((image.cols+ ThreadsPerBlock-
-1)/ThreadsPerBlock) and for the second attribute instead of using columns use image.rows, and
-
-
-for the Threads use for both attributes ThreadsPerBlock. Then the call to the global function is
-done and we use the previously created Blocks and Threads and pass as paremeters to the global
-function the d_image, the d_text which is the message to use in the device and the textSize which
-is going to be de actual size of the process of hiding.
-
-The global function will change the least significant bit of every pixel RGB component, to do so
-the offset is calculated as col + row * blockDim.x * gridDim.x where col = blockIdx.x *
-blockDim.x + threadIdx.x and the row = blockIdx.y * blockDim.y + threadIdx.y. The index to use
-for the text then is calculated as index = offset/8.
-
-After this is done the bit_count = 7 – (offset%8) which is how much the text[index] will be shifted
-to the right so the actual least significant bit on the already shifted bits will be the change on the
-pixel color.
-
-The change of the LSB is done through an if charBit &1 where charBit is the already shifted bits
-and if the following if is 1 the image[offset] |= 1which will change the LSB to 1 but if the
-conditional is false then the LSB is change to 0 doing the following image[offset] &= ~1.
-
-Once the bits are changed the device image is copied to the output image that is on the host, finally
-I added eight more bits to the message so the program that show the hidden message knows when
-to stop and finllay use the imwrite function on OpenCV to write the image intro the system with
-the name of the file specified when the program is run.
-
-### II.II Showing
-
-The showing program receives as argument the image file where the hidden message is in, and one
-the program has the name of the file it uses imread to read the image using OpenCV. The image
-must be used the same way as the hiding program, the image is copied to the device and create the
-same Blocks and Threads as the hiding program as well. Then the gobal function must be called
-and the attributes passed the image, where the text is going to be saved and finally the width*height
-which is the size of the image.
-
-In the global function the offset is used as well as in the hiding code, the text then will change the
-text[offset] to 0 by default but if the condition that (image[offset]&1) is 1 this means that the LSB
-of the corresponding color component is 1 and the text[offset] is changed to 1 using text[offset] |=
-
-1. Once the text is gathered the host will convert each of the numbers contained in the text to a
-char using a function and if the char is “00000000” then it will stop reading and print the message
-that was hidden on the image.
-
-## III. Manual to use OpenCV + CUDA in Google Colab
 
 The objective of this manual is to show how to work with OpenCV in Google Colab given that
 there can be some hardware issues that can prevent us to do certain development like the use of
@@ -332,23 +244,8 @@ The name of the file changes depending on the file.out line on the code above.
 ```sh
 ./file.out
 ```
-## IV. Conclusion
 
-The use of steganography in images can be used by many people as a way to pass secret
-messages from devices, right now that many of us are afraid that Google or Facebook are spying
-on us and using our information for their benefit the security and privacy has become a very
-valuable asset.
-
-The use of CUDA for steganography can optimize a lot of the time that the message is being
-hidden in the image and can be a great way to hide big data files into much bigger files.
-
-But right because not everybody has access to an NVIDIA GPU a great way to do this
-implementation is with Google Colab and with this manual will help more people be able to do
-images processing and implementations using CUDA and OpenCV because there is no
-information on the internet on how to do it. I’m satisfied that this will help a lot of people in the course and around the world that wants to implement CUDA without the constraint of needing a
-NVIDIA GPU.
-
-## V. References
+## IV. References
 
 [Kessler, G. (2002, septiembre). Steganography. GaryKessler.](https://www.garykessler.net/library/steganography.html)
 
