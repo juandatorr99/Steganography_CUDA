@@ -33,7 +33,7 @@ only one bit from the message taken from a text file. Because each bit is indepe
 other steganography is a great way to apply the CUDA programming language and separate even
 the colors of each pixel to change their least significant bit.
 
-II.I Hiding
+### II.I Hiding
 To do the process of hiding I received the name of the files that were going to be used as arguments
 in the terminal the name of the image file where the message wants to be hidden, the text file with
 the message that wants to be hidden and finally the name of the output image that is going to
@@ -71,7 +71,7 @@ I added eight more bits to the message so the program that show the hidden messa
 to stop and finllay use the imwrite function on OpenCV to write the image intro the system with
 the name of the file specified when the program is run.
 
-II.II Showing
+### II.II Showing
 
 The showing program receives as argument the image file where the hidden message is in, and one
 the program has the name of the file it uses imread to read the image using OpenCV. The image
