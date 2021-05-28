@@ -157,12 +157,12 @@ create a code block clicking on + Code.
 Figure 8 Insert Snippet of Code
 ```
 Then add the following snippet of code:
-
+```python
 from google.colab import drive
 drive.mount('/content/drive')
 %cd "/content/drive/My Drive/YourFolder"
 !pwd
-
+```
 If you added the folder to the root of your Google Drive you will have to replace “YourFolder”
 with the name of your folder. This folder is going to be the one in where the CUDA files will be
 
@@ -199,6 +199,7 @@ Figure 11 Text Editor App
 
 Once the file is created you will have to add the following snippet of code to the header.
 
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <opencv2/core/core.hpp>
@@ -207,13 +208,14 @@ Once the file is created you will have to add the following snippet of code to t
 #include <opencv2/opencv.hpp>
 
 using namespace cv;
+```
 
 Now you can write whatever code you’d like in CUDA C using Open CV, for practicality I will
 add the following code which reads an image and makes an exact copy of it using CudaMalloc
 and CudaMemcpy. This code is a small part of my project of steganography, if you want to run it
 make sure you have an image file called image.png and that is on the same folder as the CUDA
 file.
-
+```c
 _int_ main(){
 Mat image = imread("image.png");
 _int_ imageSize = image.step * image.rows;
@@ -229,6 +231,7 @@ cudaMemcpy(output.ptr(), d_image, imageSize, cudaMemcpyDeviceToHost);
 imwrite("output.png", output);
 return 0 ;
 }
+```
 
 6. 1 Running terminal Google Colab Pro
 
