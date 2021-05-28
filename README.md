@@ -105,11 +105,9 @@ one used to create new folders or documents, then click on More and afterwards c
 Connect more apps.
 
 
-<figure class="image">
-  <img src="./DocumentationImages/1.png" alt="Figure 1" width="400">
-  <figcaption>Figure 1</figcaption>
-</figure>
 
+  <img src="./DocumentationImages/1.png" alt="Figure 1" width="400">
+  
 _Figure 1 New button_
 
 
