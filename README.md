@@ -105,11 +105,18 @@ one used to create new folders or documents, then click on More and afterwards c
 Connect more apps.
 
 ![Image of Yaktocat](./DocumentationImages/1.png)
+<img src="./DocumentationImages/1.png" alt="drawing" width="200"/>
+
+<figure class="image">
+  <img src="./DocumentationImages/1.png" alt="{{ include.description }}">
+  <figcaption>Figure 1</figcaption>
+</figure>
+
 _Figure 1 New button_
 
-```
-Figure 2 Connect more apps
-```
+
+_Figure 2 Connect more apps_
+
 Then search for Colaboratory and add it to Google Drive using the drive button in the down right
 corner
 
