@@ -1,4 +1,4 @@
-## Juan David Torres Velasco 
+### Juan David Torres Velasco 
 # Manual to use OpenCV + CUDA in Google Colab
 
 
