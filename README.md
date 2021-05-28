@@ -104,6 +104,7 @@ connected skip to the next step). To do this you will have to click on the New b
 one used to create new folders or documents, then click on More and afterwards click on
 Connect more apps.
 
+![Image of Yaktocat](./DocumentationImages/1.png)
 _Figure 1 New button_
 
 ```
