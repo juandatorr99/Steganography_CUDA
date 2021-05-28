@@ -1,6 +1,7 @@
+## Juan David Torres Velasco 
 # Manual to use OpenCV + CUDA in Google Colab
 
-## Juan David Torres Velasco 
+
 
 The objective of this manual is to show how to work with OpenCV in Google Colab given that
 there can be some hardware issues that can prevent us to do certain development like the use of
