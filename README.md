@@ -106,24 +106,28 @@ Connect more apps.
 
 
 
-  <img src="./DocumentationImages/1.png" alt="Figure 1" width="400">
+  <img src="./DocumentationImages/1.png" alt="Figure 1" height="300">
   
 _Figure 1 New button_
 
+<img src="./DocumentationImages/2.png" alt="Figure 1" height="300">
 
 _Figure 2 Connect more apps_
 
 Then search for Colaboratory and add it to Google Drive using the drive button in the down right
 corner
 
+<img src="./DocumentationImages/3.png" alt="Figure 1" height="300">
+
 _Figure 3 Install Colaboratory_
 
 
 Click install and you will have to accept the permissions in order to install it.
 
-```
-Figure 4 Install Colaboratory
-```
+<img src="./DocumentationImages/4.png" alt="Figure 1" height="300">
+
+_Figure 4 Install Colaboratory_
+
 2. Creating Notebook
 
 
@@ -132,24 +136,28 @@ Drive, it can be created from any folder, but to have a better organization it w
 same folder where the CUDA files are going to be. Open the folder you’re going to be using and
 click the New button and select Google Colaboratory. This will create your Colab Notebook
 
-```
-Figure 5 Create new Notebook
-```
+
+<img src="./DocumentationImages/5.png" alt="Figure 1" height="300">
+
+_Figure 5 Create new Notebook_
+
 3. Connect the GPU to Google Colab
 
 To change the runtime, you have to click on edit, then notebook settings as it is shown in the
 figure 6
 
 
-```
-Figure 6 Notebook settings
-```
+<img src="./DocumentationImages/6.png" alt="Figure 1" height="300">
+
+_Figure 6 Notebook settings_
+
 Once in the notebook settings you will have to change the hardware accelerator to GPU and save
 the settings as it is shown in the figure 7.
 
-```
-Figure 7 Hardware accelerator
-```
+<img src="./DocumentationImages/7.png" alt="Figure 1" height="300">
+
+_Figure 7 Hardware accelerator_
+
 4. Connect Drive to Google Colab local environment
 
 Disclaimer. You will have to do this every time you reconnect to your Google Colab notebook.
@@ -157,9 +165,10 @@ Disclaimer. You will have to do this every time you reconnect to your Google Col
 You will have to add a piece of code to your Google Colab Notebook, to do so you will have to
 create a code block clicking on + Code.
 
-```
-Figure 8 Insert Snippet of Code
-```
+<img src="./DocumentationImages/8.png" alt="Figure 1" height="300">
+
+_Figure 8 Insert Snippet of Code_
+
 Then add the following snippet of code:
 ```python
 from google.colab import drive
@@ -174,32 +183,34 @@ with the name of your folder. This folder is going to be the one in where the CU
 present. Make sure that the path to your folder is correct, note that the root Drive Folder is
 **"/content/drive/My Drive”**.
 
-Run the snippet of code and once you run it a prompt
-like the following will appear. You will have to click
-on the link that is shown, follow the instruction and
-copy the authorization code to your clipboard using
+Run the snippet of code and once you run it a prompt like the following will appear. You will have to click
+on the link that is shown, follow the instruction and copy the authorization code to your clipboard using
 the clipboard button.
+
+<img src="./DocumentationImages/9.png" alt="Figure 1" height="300">
+
+_Figure 9 Authorization code copy_
 
 Then you will have to paste the code to the text field shown in the figure 10 and press the enter
 key.
 
-```
-Figure 10 Authorization Code Paste
-```
-5. CUDA File
+<img src="./DocumentationImages/10.png" alt="Figure 1" height="300">
 
-```
-Figure 9 Authorization code copy
-```
+_Figure 10 Authorization Code Paste_
+
+5. CUDA File
 
 Then you will have to create new files in the folder you have the Google Colab notebook. You
 can create them using the Google Drive “Text Editor” that can be installed as the Google Colab
 app was installed. You can also upload the files from your computer.
 
-```
-Figure 11 Text Editor App
-```
-## Figure 12 File CUDA Creation
+<img src="./DocumentationImages/11.png" alt="Figure 1" height="300">
+
+_Figure 11 Text Editor App_
+
+<img src="./DocumentationImages/12.png" alt="Figure 1" height="300">
+
+_Figure 12 File CUDA Creation_
 
 Once the file is created you will have to add the following snippet of code to the header.
 
@@ -242,9 +253,10 @@ return 0 ;
 To run the code if you have Google Colaboratory Pro you can use the terminal button in the
 below left corner as it shown in the figure 13.
 
-```
-Figure 13 Google Colab Pro Terminal
-```
+<img src="./DocumentationImages/13.png" alt="Figure 1" height="300">
+
+_Figure 13 Google Colab Pro Terminal_
+
 Then you will have to go to the directory where the files are located inserting the following code
 in the terminal.
 cd drive/MyDrive/MyFolder
@@ -303,9 +315,10 @@ prompt: 'colab > '
 After you run these two lines of code the terminal will appear as the figure 14 shows. The
 terminal’s current folder is the folder you wrote in the step 4.
 
-```
-Figure 14 Terminal
-```
+<img src="./DocumentationImages/14.png" alt="Figure 1" height="300">
+
+_Figure 14 Terminal_
+
 7. Compile and Run
 
 To compile the Cuda file because everything is already preinstalled in Google Colab you will
