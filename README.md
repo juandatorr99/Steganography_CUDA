@@ -312,9 +312,9 @@ nvcc file.cu `pkg-config --cflags opencv` -o file.out `p-config --libs opencv`
 ```
 Once it is compiled to run the program you will have to run the following code on the terminal.
 The name of the file changes depending on the file.out line on the code above.
-
+```sh
 ./file.out
-
+```
 ## IV. Conclusion
 
 The use of steganography in images can be used by many people as a way to pass secret
@@ -333,30 +333,12 @@ NVIDIA GPU.
 
 ## V. References
 
-Kessler, G. (2002, septiembre). Steganography. GaryKessler.
+[Kessler, G. (2002, septiembre). Steganography. GaryKessler.](https://www.garykessler.net/library/steganography.html)
 
-```
-https://www.garykessler.net/library/steganography.html
-```
-Choudary, A. (2020, 25 noviembre). Steganography Tutorial _–_ A Complete Guide For
+[Choudary, A. (2020, 25 noviembre). Steganography Tutorial _–_ A Complete Guide For Beginners. Edureka.](https://www.edureka.co/blog/steganography-tutorial)
 
-```
-Beginners. Edureka. https://www.edureka.co/blog/steganography-tutorial
-```
-Korakot, A. (2019, 13 diciembre). How can I run shell (terminal) in Google Colab? Stack
+[Korakot, A. (2019, 13 diciembre). How can I run shell (terminal) in Google Colab? Stack Overflow.](https://stackoverflow.com/questions/59318692/how-can-i-run-shell-terminal-in-google-colab)
 
-```
-Overflow. https://stackoverflow.com/questions/59318692/how-can-i-run-shell-terminal-
-```
-```
-in-google-colab
-```
-Wilson, D. (2014, 28 abril). Convert a string of binary into an ASCII string (C++). Stack
+[Wilson, D. (2014, 28 abril). Convert a string of binary into an ASCII string (C++). Stack Overflow.](https://stackoverflow.com/questions/23344257/convert-a-string-of-binary-into-an-ascii-string-c/)
 
-```
-Overflow. https://stackoverflow.com/questions/23344257/convert-a-string-of-binary-
-```
-```
-into-an-ascii-string-c/
-```
 
