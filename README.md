@@ -165,7 +165,7 @@ Disclaimer. You will have to do this every time you reconnect to your Google Col
 You will have to add a piece of code to your Google Colab Notebook, to do so you will have to
 create a code block clicking on + Code.
 
-<img src="./DocumentationImages/8.png" alt="Figure 1" height="300">
+<img src="./DocumentationImages/8.png" alt="Figure 1" height="100">
 
 _Figure 8 Insert Snippet of Code_
 
@@ -187,14 +187,14 @@ Run the snippet of code and once you run it a prompt like the following will app
 on the link that is shown, follow the instruction and copy the authorization code to your clipboard using
 the clipboard button.
 
-<img src="./DocumentationImages/9.png" alt="Figure 1" height="300">
+<img src="./DocumentationImages/9.png" alt="Figure 1" height="100">
 
 _Figure 9 Authorization code copy_
 
 Then you will have to paste the code to the text field shown in the figure 10 and press the enter
 key.
 
-<img src="./DocumentationImages/10.png" alt="Figure 1" height="300">
+<img src="./DocumentationImages/10.png" alt="Figure 1" height="100">
 
 _Figure 10 Authorization Code Paste_
 
@@ -204,11 +204,11 @@ Then you will have to create new files in the folder you have the Google Colab n
 can create them using the Google Drive “Text Editor” that can be installed as the Google Colab
 app was installed. You can also upload the files from your computer.
 
-<img src="./DocumentationImages/11.png" alt="Figure 1" height="300">
+<img src="./DocumentationImages/11.png" alt="Figure 1" height="100">
 
 _Figure 11 Text Editor App_
 
-<img src="./DocumentationImages/12.png" alt="Figure 1" height="300">
+<img src="./DocumentationImages/12.png" alt="Figure 1" height="100">
 
 _Figure 12 File CUDA Creation_
 
@@ -253,7 +253,7 @@ return 0 ;
 To run the code if you have Google Colaboratory Pro you can use the terminal button in the
 below left corner as it shown in the figure 13.
 
-<img src="./DocumentationImages/13.png" alt="Figure 1" height="300">
+<img src="./DocumentationImages/13.png" alt="Figure 1" height="500">
 
 _Figure 13 Google Colab Pro Terminal_
 
@@ -315,7 +315,7 @@ prompt: 'colab > '
 After you run these two lines of code the terminal will appear as the figure 14 shows. The
 terminal’s current folder is the folder you wrote in the step 4.
 
-<img src="./DocumentationImages/14.png" alt="Figure 1" height="300">
+<img src="./DocumentationImages/14.png" alt="Figure 1" height="200">
 
 _Figure 14 Terminal_
 
